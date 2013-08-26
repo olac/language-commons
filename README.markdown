@@ -1,4 +1,8 @@
 This is a fork of Alistair Roche's original code. It was slightly modified to be deployed on the OLAC web server.
+Below is the original documentation by Alistair. Documentation for OLAC deployment can be found here:
+
+  https://code.google.com/p/olac/wiki/DeployingLanguageCommonsUploader
+  
 
 CommonsUploader
 ===============
