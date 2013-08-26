@@ -1,3 +1,5 @@
+This is a fork of Alistair Roche's original code. It was slightly modified to be deployed on the OLAC web server.
+
 CommonsUploader
 ===============
 
