@@ -28,7 +28,7 @@ def upload(request):
             add_item(form.cleaned_data)
             return HttpResponseRedirect("/submissions")
         for field in form.fields:
-        return render_to_response("upload.html", {"form": form},
+            return render_to_response("upload.html", {"form": form},
             context_instance=RequestContext(request))
     form = UploadDataForm()
     return render_to_response("upload.html", {"form": form},

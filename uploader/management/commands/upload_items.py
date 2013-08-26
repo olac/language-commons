@@ -5,11 +5,11 @@ import urllib2
 from django.core.management.base import BaseCommand, CommandError
 from uploader.models import Item, Identifier
 from datetime import datetime
-from commons.settings import MEDIA_ROOT, PROJECT_DIR
+from django.conf import settings
 from uploader.secret import accesskey, secretkey
 
 def log(message):
-    log_file = open(os.path.join(PROJECT_DIR, 'error.log'),'a')
+    log_file = open(os.path.join(settings.PROJECT_DIR, 'error.log'),'a')
     date_str = str(datetime.now())
     full_message = "\n[%s]: %s\n" % (date_str, message)
     log_file.write(full_message)
@@ -78,7 +78,7 @@ class Command(BaseCommand):
         else:
             oldest_approved.first("identifier").identifier = ident
             oldest_approved.first("identifier").save()
-        fname = MEDIA_ROOT + oldest_approved.file.file_name.name
+        fname = settings.MEDIA_ROOT + oldest_approved.file.file_name.name
         oldest_approved.status = "U" # Uploading
         oldest_approved.save()
         headers = (('x-amz-auto-make-bucket','1'),

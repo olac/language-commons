@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.views.static import serve
-from uploader.views import upload, success, home, submissions
+from uploader.views import upload, submissions
 from uploader.views import generate_static_repo
 from settings import MEDIA_ROOT
 # Uncomment the next two lines to enable the admin:
@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^$', upload), 
-    (r'^success/$', success),
+    (r'^upload/$', upload),
     (r'^admin/', include(admin.site.urls)),
     (r'^submissions/$', submissions),
     (r'^sr$', generate_static_repo),

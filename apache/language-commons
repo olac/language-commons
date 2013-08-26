@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+        ServerName upload.languagecommons.org
+        ServerAdmin olac@localhost
+
+        AddType image/x-icon .ico
+        <Files favicon.ico>
+                ErrorDocument 404 /favicon.ico
+        </Files>
+
+        DocumentRoot /olac/language-commons/www
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias /media/ /olac/language-commons/media/
+        Alias /admin_media/ /olac/language-commons/media/admin/
+        WSGIScriptAlias / /olac/language-commons/apache/django.wsgi
+
+        ErrorLog /var/log/apache2/error-langcom.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access-langcom.log combined
+</VirtualHost>
