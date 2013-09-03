@@ -11,7 +11,7 @@ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository http:/
 
 <sr:Identify>
 <oai:repositoryName>Language Commons Language Corpora</oai:repositoryName>
-<oai:baseURL>http://www.language-archives.org/hosted/languagecommons.org.xml</oai:baseURL>
+<oai:baseURL>http://upload.languagecommons.org/sr</oai:baseURL>
 <oai:protocolVersion>2.0</oai:protocolVersion>
 <oai:adminEmail>laura@longnow.org</oai:adminEmail>
 <oai:earliestDatestamp>2010-09-23</oai:earliestDatestamp>
